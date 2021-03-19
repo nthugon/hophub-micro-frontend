@@ -65,7 +65,8 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "hophub-homepage-angular:build"
+            "browserTarget": "hophub-homepage-angular:build",
+            "publicHost": "http://localhost:4200"
           },
           "configurations": {
             "production": {
