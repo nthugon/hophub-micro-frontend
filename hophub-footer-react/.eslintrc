@@ -1,4 +1,101 @@
+// {
+//   "extends": ["react-important-stuff", "plugin:prettier/recommended"],
+//   "parser": "babel-eslint",
+//   "requireConfigFile": "false"
+// }
 {
-  "extends": ["react-important-stuff", "plugin:prettier/recommended"],
-  "parser": "babel-eslint"
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "babel",
+    "prettier",
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "linebreak-style": 0,
+    "class-methods-use-this": "off",
+    "import/no-unresolved": [
+      2,
+      { "ignore": ["^@f5cs-ui/", "locales/en.json$"] }
+    ],
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": [
+          "**/*.test.jsx",
+          "**/*.test.tsx",
+          "**/*.stories.jsx",
+          "**/*.stories.tsx"
+        ],
+        "peerDependencies": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["__REDUX_DEVTOOLS_EXTENSION__"]
+      }
+    ],
+    "no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "react/no-unused-prop-types": [1, {}],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/static-property-placement": "off",
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "react/no-unescaped-entities": [
+      2,
+      {
+        "forbid": [">", "}"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "jest": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "page": true,
+    "browser": true,
+    "host": true,
+    "Z": true,
+    "aptrinsic": true,
+    "PrivacyManagerAPI": true,
+    "_truste_eu": true,
+    "AmazonCognitoAdvancedSecurityData": true
+  }
 }
