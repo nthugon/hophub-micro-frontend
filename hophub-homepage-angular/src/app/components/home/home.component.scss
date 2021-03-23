@@ -1,0 +1,55 @@
+.content {
+  position: absolute;
+  width: 100%;
+  top: 115px;
+  bottom: 50px;
+  overflow: auto;
+  color: #fafafa;
+  background-color: #d3d3d3;
+  background-size: 100%;
+}
+
+.hero {
+  background: url("/assets/img/beer-pint.png") no-repeat center -15px;
+  background-size: cover;
+  min-height: 600px;
+  .hero-text {
+    vertical-align: top;
+    color: #090909;
+    width: 50%;
+    margin: 0 auto;
+    padding: 13% 0 5% 0;
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  img {
+    width: 30%;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 350px) {
+  .hero {
+    min-height: 700px;
+    .hero-text {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    width: 75%;
+    margin: 0 auto;
+    min-height: 1200px;
+    .hero-text {
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
