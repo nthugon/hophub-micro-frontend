@@ -26,6 +26,9 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./src/app/styles"]
+            },
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
               "libraryName": "hophub-beerspage-angular",
